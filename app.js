@@ -26,6 +26,11 @@ $("#btn").on("click", function() {
 		"Sum", sum2, 
 		"Length", values.length, 
 		"Avg", sum2 / values.length);
+
+	if (_.isEmpty(avgs) === false) {
+		$("#line").empty();
+		sparky.sparkline("line", values, {dot_radius: 5, dot_fill: 'red', width: 1000, height: 50});
+	}
 });
 
 
