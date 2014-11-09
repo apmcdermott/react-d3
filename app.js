@@ -4,7 +4,10 @@ function sum(values) {
 
 var count = 0;
 var values = [];
-var avgs = []
+var avgs = [];
+
+$("#sum").text("0");
+$("#avg").text("0");
 
 $("#btn").on("click", function() {
 	var n = _.random(0, 100);
@@ -29,7 +32,7 @@ $("#btn").on("click", function() {
 
 	if (_.isEmpty(avgs) === false) {
 		$("#line").empty();
-		sparky.sparkline("line", values, {dot_radius: 5, dot_fill: 'red', width: 1000, height: 50});
+		sparky.sparkline("line", avgs, {width: 1000, height: 50});
 	}
 });
 
